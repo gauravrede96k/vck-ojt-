@@ -21,21 +21,21 @@ h2 {
   font-weight: bold;
 }
 
-.eligibility-table {
+.eligibility-criteria {
   width: 100%;
   border-collapse: collapse;
   margin-top: 1rem;
     border: 2px solid #333; /* Visible border around the table */
 }
 
-.eligibility-table th,
-.eligibility-table td {
+.eligibility-criteria th,
+.eligibility-criteria td {
   border: 1px solid black;
   padding: 0.75rem;
   text-align: left;
 }
 
-.eligibility-table th {
+.eligibility-criteria th {
   background-color: #f5f5f5;
   font-weight: bold;
 }

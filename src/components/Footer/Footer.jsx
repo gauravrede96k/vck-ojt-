@@ -3,7 +3,7 @@ import "./Footer.css";
 
 const Footer = () =>{
     return (
-        <footer>
+        <footer className="footer">
             <p>Copyright © 2025 Vivekanand College. All rights reserved.</p>
         </footer>
     );

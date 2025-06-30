@@ -106,7 +106,7 @@ li {
   text-align: center;
   color: white;
   border-radius: 10px;
-  padding: 2rem;
+  padding: 3rem;
   isolation: isolate;
 
 }
@@ -168,7 +168,7 @@ li {
 .gallery-image {
   width: 100%;
   max-width: 420px;
-  height: auto;
+  height: 200px;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
