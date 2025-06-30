@@ -1,23 +1,45 @@
-import {Link} from 'react-router-dom'
-const Header = () =>{
-    return(
-        <>
+import React, { useState } from 'react';
+import {Link} from 'react-router-dom';
+import './Header.css';
 
-             <header>
-                <nav>
-                    <Link to="/home">Home</Link>
-                    <Link to="/about">About</Link>
-                    <Link to="/courses">Courses</Link>
-                    <Link to="/contact">Contact</Link>
+const Header = () =>{
+    const [menuOpen, setMenuOpen] =useState(false);
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
+    const closeMenu = () => {
+        setMenuOpen(false);
+    }
+
+    return(
+        <header className="header">
+            <div className="header-container">
+                <h1 className="logo">Vivekanand College</h1>
+                
+                <nav className="nav">
+                    <Link to="/" className="nav-link">Home</Link>
+                    <Link to="/about" className="nav-link">About</Link>
+                    <Link to="/courses" className="nav-link">Courses</Link>
+                    <Link to="/contact" className="nav-link">Contact</Link>
+                    <Link to="/admission" className="nav-btn">Apply Now</Link>
                 </nav>
-            </header>
-        </>
-       
-    )
-}
+
+                <button className="hamburger" onClick={toggleMenu}>
+                  ☰
+                </button>
+            </div>
+
+            <div className={`mobile-menu ${menuOpen ? 'show' : ''}`}>
+                <Link to="/" onClick={closeMenu} className="mobile-link">Home</Link>
+                <Link to="/about" onClick={closeMenu} className="mobile-link">About</Link>
+                <Link to="/courses" onClick={closeMenu} className="mobile-link">Courses</Link>
+                <Link to="/contact" onClick={closeMenu} className="mobile-link">Contact</Link>
+                <Link to="/admission" onClick={closeMenu} className="mobile-apply">Apply Now!</Link>
+            </div>
+        </header>
+    );
+};
 
 export default Header;
-
-
-
-document.querySelector("#root > div.main-layout > div.content > div > div.hero-section > img")

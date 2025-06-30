@@ -1,14 +1,12 @@
-const Footer = () =>{
-    return(
-        <div>
-            <Header>
-                <nav>
-                    <Link to="footer">© 2025 Vivekanand College. All rights reserved.</Link>
-                </nav>
-            </Header>
+import React from "react";
+import "./Footer.css";
 
-        </div>
-    )
-}
+const Footer = () =>{
+    return (
+        <footer>
+            <p>Copyright © 2025 Vivekanand College. All rights reserved.</p>
+        </footer>
+    );
+};
 
 export default Footer;
